@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        span {
+            color: pink;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +20,7 @@
         let sex = prompt('性别')
         // document.write(name, age, sex)
         // 模板字符串
-        document.write(`大家好，我是${name},性别${sex},今年${age - 10}岁了`)
+        document.write(`大家好，我是<span>${name}</span>,性别${sex},今年${age - 10}岁了`)
     </script>
 </body>
 

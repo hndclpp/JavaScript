@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 练习一：num赋值20，name赋值张三，控制台输出num和name.
+        let num = 20
+        let name = '张三'
+        console.log(num)
+        console.log(name)
+        // console.log(num + '\n' + name)
+
+        //练习二： 浏览器弹出对话框：输入年龄，页面中输入刚才的年龄
+        let age = prompt('输入年龄:')
+        document.write(age)
+
+        document.write('\n')
+
+        //练习三：交换变量。 a=10 b=20 --- a=20 b=10
+        let a = 10
+        let b = 20
+        document.write('a的值是' + a)
+        document.write('b的值是' + b + '\n')
+        let c
+        c = b
+        b = a
+        a = c
+        document.write('a的值是' + a)
+        document.write('b的值是' + b)
+
+
+
+
+    </script>
+</body>
+
+</html>

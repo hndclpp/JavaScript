@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let num = '10' //str
+        document.write(`<span>num</span>的类型是<span>${typeof num}</span>,经过Number的转换之后的类型是<span>${typeof (Number(num))}</span>`)
+        // Number(数据)
+        console.log(Number(num)); // 10
+        console.log(Number('10.01')); //10.01
+
+        // parseInt转换成数字型，只保留整数，没有四舍五入
+        console.log(parseInt(num)); //10
+        console.log(parseInt('9.99999')); //9
+        console.log(parseInt('9.11111')); //9
+
+        // parseFloat 转换成数字型，保留小数部分
+        console.log(parseFloat('10.11111111')); // 10.11111111
+        console.log(parseFloat('10.99999999')); // 10.99999999
+
+        // 区别：
+        // Number() 只能放数字类型的字符，否则返回NaN
+        // NaN：Not A Number
+        console.log(Number('10.0112abc')); //NaN
+        console.log(parseFloat('10.123abc')); // 10.123 ?
+        console.log(parseFloat('10.0112abc')); // 10.0112
+    </script>
+</body>
+
+</html>

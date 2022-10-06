@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // 按照成绩的等级打印百分制的分数段
+        let grade = prompt('输入想要查询的等级(A、B、C、D):')
+        switch (grade) {
+            case 'A':
+                alert(`你查询${grade}的等级，分数段为85~100`)
+                break; // 没有break会造成case穿透
+            case 'B':
+                alert(`你查询${grade}的等级，分数段为70~84`)
+                break;
+            case 'C':
+                alert(`你查询${grade}的等级，分数段为60~69`)
+                break;
+            case 'D':
+                alert(`你查询${grade}的等级，分数段为0~59`)
+                break;
+
+
+            default:
+                alert('error')
+                break;
+        }
+    </script>
+</body>
+
+</html>

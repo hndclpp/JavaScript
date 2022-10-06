@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 接收用户输入的用户名和密码，若用户名为 “admin” ,且密码为 “123456” ,则提示用户登录成功!  否则，3次之后结束。 -->
+    <script>
+        let i = 0
+        while (true) {
+            let name = prompt('🥳输入用户名：')
+            let pwd = prompt('🙈输入密码：')
+            if (name === 'admin' && pwd === '123456') {
+                alert(`欢迎${name},登录成功🌈`)
+                break
+            }
+            alert('登陆失败，请检查用户名和密码🤔')
+
+            i++
+            if (i === 3) {
+                alert(`登录失败次数已达${i}次，自动退出⚡`)
+                break
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

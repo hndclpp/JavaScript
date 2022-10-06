@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>银行卡余额</title>
+</head>
+
+<body>
+
+
+    <script>
+        let total = 50
+        while (true) {
+            let select = prompt(`
+        选择您要办理的业务:
+            0. 退出
+            1. 存款
+            2. 取款
+            3. 查询余额
+        `)
+            if (select === '0' || select == null) {
+                alert('已退出，欢迎下次使用💕')
+                break
+            }
+            if (select == '') {
+                alert('你好像输入了个寂寞😒')
+                continue
+            }
+            switch (select) {
+
+                case '1':
+                    let deposit = +prompt('你要存多少？')
+                    total = total + deposit
+                    alert(`💰${deposit}存款成功,当前余额为💰${total}`)
+                    break
+
+                case '2':
+                    let getMoney = +prompt('输入取款数')
+                    if (getMoney > total) {
+                        alert(`身体仿佛被掏空，最多可取💰${total}`)
+                        break
+                    }
+                    total = total - getMoney
+                    alert(`💰${getMoney}取款成功,当前余额为💰${total}`)
+                    break;
+                case '3':
+                    alert(`您的余额为💰${total}`)
+                    break;
+                default:
+                    alert(`你输入的${select}有误！🙈`)
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
